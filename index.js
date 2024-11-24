@@ -6,24 +6,24 @@ const substract = document.querySelector("#substract")
 const totalSpan = document.querySelector(".valor-total")
 
 const updateTotal = () => {
-  const quantity = quantitySpan.textContent
+  const quantity = quantitySpan.innerHTML
   const total = precio * quantity
-  totalSpan.textContent = total
+  totalSpan.innerHTML = total
 };
 
 substract.addEventListener("click", () => {
-  let quantity = quantitySpan.textContent
+  let quantity = quantitySpan.innerHTML
   if (quantity > 1) {
     quantity--
-    quantitySpan.textContent = quantity
+    quantitySpan.innerHTML = quantity;
     updateTotal()
   }
 })
 
 sum.addEventListener("click", () => {
-  let quantity = quantitySpan.textContent
+  let quantity = quantitySpan.innerHTML
   quantity++
-  quantitySpan.textContent = quantity
+  quantitySpan.innerHTML = quantity
   updateTotal()
 })
 
